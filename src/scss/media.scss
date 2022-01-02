@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+  body {
+    overflow-y: initial;
+  }
+  .container {
+    width: 90%;
+  }
+  .nav {
+    font-size: 1rem;
+  }
+  .table {
+    font-size: 0.75rem;
+    grid-gap: 0.15rem;
+  }
+  .table-header,
+  .table-item {
+    padding: 0.75rem 0.15rem;
+  }
+  .table-item.date,
+  .table-item.rating {
+    .dateInput,
+    .ratingInput {
+      font-size: 0.75rem;
+      padding: 0.5rem 0.25rem;
+    }
+    .dateInput {
+      width: 5rem;
+    }
+    .ratingInput {
+      width: 2.5rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .nav-item {
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+    &:first-child {
+      border-radius: 0% 0.75rem 0.75rem 0%;
+    }
+    &:last-child {
+      border-radius: 0.75rem 0% 0% 0.75rem;
+    }
+  }
+  .table {
+    grid-template-columns: minmax(0%, 2fr) minmax(0%, 1fr) minmax(0%, 3fr) minmax(0%, 3fr) minmax(0%, 2fr);
+  }
+  .table-item.date,
+  .table-item.rating {
+    .dateInput,
+    .ratingInput {
+      font-size: 0.65rem;
+      padding: 0.5rem 0.15rem;
+    }
+    .dateInput {
+      width: 3.5rem;
+    }
+    .ratingInput {
+      width: 2rem;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@use 'vars.scss' as *;
+@use 'Navbar.scss';
+@use 'inputs.scss';
+@use 'react-datepicker/dist/react-datepicker';
+@use 'Footer.scss';
+
+.table {
+  background-color: lighten($primary-color, 20%);
+  border-radius: 0.25rem;
+  display: grid;
+  font-size: 1.25rem;
+  grid-gap: 0.25rem;
+  grid-template-columns: minmax(0%, 2fr) minmax(0%, 2fr) minmax(0%, 4fr) minmax(0%, 8fr) minmax(0%, 3fr);
+  text-align: center;
+}
+.table-header,
+.table-item {
+  background-color: lighten($primary-color, 15%);
+  border-radius: inherit;
+  padding: 1.25rem;
+  word-break: break-all;
+}
+.table-header {
+  background-color: lighten($primary-color, 5%);
+  border: 0.15rem solid $secondary-color;
+  cursor: pointer;
+  position: sticky;
+  top: 0%;
+  transition: all 0.25s ease;
+  user-select: none;
+  z-index: 1;
+  &:active,
+  &:hover {
+    background-color: lighten($primary-color, 10%);
+  }
+}
+.not-allowed {
+  cursor: not-allowed;
+}
+.icon-caret-down,
+.icon-caret-up {
+  font-size: 0.75rem;
+  margin: 0.15rem;
+}
+.table-item.date,
+.table-item.rating {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0%;
+  .dateInput,
+  .ratingInput {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  .dateInput {
+    width: 7rem;
+  }
+  .ratingInput {
+    width: 3.5rem;
+  }
+}
+.table-item.img {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 5rem;
+  padding: 0.75rem 0%;
+  img {
+    width: 46px;
+  }
+}
+.table-item.id {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  a {
+    display: flex;
+    flex-direction: column;
+    .icon-trash {
+      cursor: pointer;
+      padding: 0.15rem;
+    }
+  }
+}
+.table-item.name {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.stats {
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+  p {
+    margin: 0.5rem 0.15rem;
+  }
+}

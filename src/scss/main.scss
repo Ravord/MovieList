@@ -1,0 +1,19 @@
+@use 'vars.scss' as *;
+@use 'MovieList.scss';
+@use 'Add.scss';
+
+:root {
+  color-scheme: $color-scheme;
+}
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+.container {
+  margin: auto;
+  width: 80%;
+}

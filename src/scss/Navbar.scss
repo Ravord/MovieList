@@ -1,0 +1,33 @@
+@use 'vars.scss' as *;
+
+.nav {
+  align-items: center;
+  background-color: lighten($primary-color, 10%);
+  display: flex;
+  font-size: 1.5rem;
+  height: 4rem;
+  justify-content: space-between;
+  padding: 0.5rem;
+  user-select: none;
+}
+.nav-item {
+  background-color: lighten($primary-color, 15%);
+  border: 0.15rem solid transparent;
+  border-radius: 2rem;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  &:active,
+  &:hover {
+    background-color: lighten($primary-color, 5%);
+    border: 0.15rem solid $secondary-color;
+  }
+  &:first-child {
+    border-radius: 0% 2rem 2rem 0%;
+  }
+  &:last-child {
+    border-radius: 2rem 0% 0% 2rem;
+  }
+}

@@ -1,0 +1,44 @@
+@use 'vars.scss' as *;
+
+.footer {
+  align-items: center;
+  background-color: lighten($primary-color, 10%);
+  border-radius: 0.25rem;
+  display: flex;
+  font-size: 0.55rem;
+  justify-content: space-around;
+  padding: 0.5rem 0%;
+  div {
+    background-color: lighten($primary-color, 15%);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+  }
+}
+.tmdb {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 7.5rem;
+  a {
+    margin-bottom: 0.3rem;
+    img {
+      filter: grayscale(100%);
+      width: 5rem;
+    }
+  }
+  p {
+    margin: 0%;
+  }
+}
+.movielist {
+  h1 {
+    margin: 0%;
+  }
+  hr {
+    border: 0.125rem dotted $secondary-color;
+    margin: 0%;
+  }
+  a {
+    color: $secondary-color;
+  }
+}
