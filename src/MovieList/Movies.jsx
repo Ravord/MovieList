@@ -4,12 +4,14 @@ import DatePicker from 'react-datepicker'
 
 import getReleaseYear from '../getReleaseYear.js'
 
-export default function Movies({ movies, setMovies, sortMovies, user }) {
+export default function Movies({ movies, setIsLoadingMovies, setMovies, sortMovies, user }) {
   useEffect(async () => {
+    setIsLoadingMovies(true)
     let { data } = await axios.post(import.meta.env.VITE_BACKEND_URL, {
       email: user.email
     })
     sortMovies(data, 'date', 'desc')
+    setIsLoadingMovies(false)
   }, [])
   async function changeDate(date, tmdb_id) {
     setMovies(movies.map((movie) => {
@@ -53,7 +55,7 @@ export default function Movies({ movies, setMovies, sortMovies, user }) {
         <div className='table-item img'>
           {
             poster_path ? <a href={`https://image.tmdb.org/t/p/original${poster_path}`}>
-              <img src={`https://image.tmdb.org/t/p/w92${poster_path}`} />
+              <img src={`https://image.tmdb.org/t/p/w154${poster_path}`} />
             </a> : <a>n/a</a>
           }
         </div>

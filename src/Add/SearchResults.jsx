@@ -13,7 +13,7 @@ export default function SearchResults({ searchResults, setSearchResults, setTmdb
             return <li key={id}>
               {
                 poster_path ? <a href={`https://image.tmdb.org/t/p/original${poster_path}`}>
-                  <img src={`https://image.tmdb.org/t/p/w92${poster_path}`} />
+                  <img src={`https://image.tmdb.org/t/p/w154${poster_path}`} />
                 </a> : <a>n/a</a>
               }
               <a className='id'>

@@ -9,6 +9,7 @@ import Footer from '../Footer.jsx'
 
 export default function MovieList() {
   let { isAuthenticated, isLoading, user } = useAuth0()
+  let [isLoadingMovies, setIsLoadingMovies] = useState(() => null)
   let [movies, setMovies] = useState(() => [])
   let [sortingState, setSortingState] = useState(() => ({ tmdb_id: null, date: null, title: null, rating: null }))
   let refreshObj = {
@@ -128,7 +129,7 @@ export default function MovieList() {
               <div className='table-header' onClick={() => sortMovies([...movies], 'rating', !sortingState.rating || sortingState.rating === 'asc' ? 'desc' : 'asc')}>
                 Rating<i className={sortingState.rating ? sortingState.rating === 'asc' ? 'icon-caret-up' : 'icon-caret-down' : null}></i>
               </div>
-              <Movies movies={movies} setMovies={setMovies} sortMovies={sortMovies} user={user} />
+              <Movies movies={movies} setIsLoadingMovies={setIsLoadingMovies} setMovies={setMovies} sortMovies={sortMovies} user={user} />
             </div>
             <div className="stats">
               {movies.length ? <p>Watched: <b>{movies.length}</b></p> : null}
@@ -137,11 +138,18 @@ export default function MovieList() {
           </>
       }
       {
-        isAuthenticated && !isLoading && !movies.length ?
-          <div style={{ textAlign: 'center' }}>
-            <h3>No movies found</h3>
-            <h5>Try adding a few</h5>
-          </div> : null
+        isAuthenticated && !isLoading ?
+          isLoadingMovies === false ?
+            !movies.length ?
+              <div style={{ textAlign: 'center' }}>
+                <h3>No movies found</h3>
+                <h5>Try adding a few</h5>
+              </div> : null
+            :
+            <div style={{ textAlign: 'center' }}>
+              <h3>Loading...</h3>
+            </div>
+          : null
       }
       {movies.length ? <Footer /> : null}
     </div>
