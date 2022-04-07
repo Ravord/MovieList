@@ -111,7 +111,7 @@ export default function MovieList() {
       {
         !isAuthenticated ?
           <div style={{ textAlign: 'center' }}>
-            {!isLoading ? <><h3>Please log in</h3><h5>You are not authorized to view this page</h5></> : <h3>Loading...</h3>}
+            {!isLoading ? <><h3>Welcome to MovieList</h3><h5>Please log in</h5></> : <h3>Loading...</h3>}
           </div>
           :
           <>
