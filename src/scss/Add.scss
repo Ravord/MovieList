@@ -1,8 +1,8 @@
-@use 'vars.scss' as *;
-@use 'Navbar.scss';
-@use 'inputs.scss';
-@use 'react-datepicker/dist/react-datepicker';
-@use 'Footer.scss';
+@use "vars.scss" as *;
+@use "Navbar.scss";
+@use "inputs.scss";
+@use "react-datepicker/dist/react-datepicker";
+@use "Footer.scss";
 
 .config {
   align-items: center;
