@@ -1,4 +1,4 @@
-@use 'vars.scss' as *;
+@use "vars.scss" as *;
 
 .footer {
   align-items: center;
@@ -31,12 +31,17 @@
   }
 }
 .movielist {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   h1 {
     margin: 0%;
   }
   hr {
-    border: 0.125rem dotted $secondary-color;
+    border: none;
+    border-bottom: 0.125rem dotted $secondary-color;
     margin: 0%;
+    width: 100%;
   }
   a {
     color: $secondary-color;

@@ -23,7 +23,7 @@ export default function SearchResults({ searchResults, setSearchResults, setTmdb
                   setSearchResults([])
                   setTmdbidInput(id)
                   tmdbidInputRef.current.focus()
-                }}></i>
+                }} title='Add'></i>
               </a>
               <a className='name' href={`https://www.themoviedb.org/movie/${id}`} title={overview}>{release_date ? `${title} ${getReleaseYear(release_date, true)}` : title}</a>
             </li>

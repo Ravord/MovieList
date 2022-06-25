@@ -1,8 +1,8 @@
-@use 'vars.scss' as *;
-@use 'Navbar.scss';
-@use 'inputs.scss';
-@use 'react-datepicker/dist/react-datepicker';
-@use 'Footer.scss';
+@use "vars.scss" as *;
+@use "Navbar.scss";
+@use "inputs.scss";
+@use "react-datepicker/dist/react-datepicker";
+@use "Footer.scss";
 
 .table {
   background-color: lighten($primary-color, 20%);
@@ -58,6 +58,7 @@
     width: 7rem;
   }
   .ratingInput {
+    cursor: pointer;
     width: 3.5rem;
   }
 }

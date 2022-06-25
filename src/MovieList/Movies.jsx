@@ -62,7 +62,7 @@ export default function Movies({ movies, setIsLoadingMovies, setMovies, sortMovi
         <div className='table-item id'>
           <a>
             <span>{tmdb_id}</span>
-            <i className='icon-trash' onClick={() => deleteMovie(tmdb_id)}></i>
+            <i className='icon-trash' onClick={() => deleteMovie(tmdb_id)} title='Delete'></i>
           </a>
         </div>
         <div className='table-item date'>
