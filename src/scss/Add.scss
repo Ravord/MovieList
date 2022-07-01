@@ -72,7 +72,8 @@
     }
   }
   hr {
-    border: 0.125rem dotted $secondary-color;
+    border: none;
+    border-bottom: dotted $secondary-color;
     width: 90%;
   }
 }
